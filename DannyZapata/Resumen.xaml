@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DannyZapata.Resumen">
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Label Text="Resumen" Grid.Row="0" Grid.Column="0" FontSize="20"/>
+                <Label Text="Usuario Conectado" Grid.Row="1" Grid.Column="0"/>
+                <Entry x:Name="txtUsuario" Placeholder="Usuario Conectado" IsReadOnly="True" Grid.Row="1" Grid.Column="1"/>
+                <Label Text="Nombre" Grid.Row="2" Grid.Column="0"/>
+                <Entry x:Name="txtNombre"  Placeholder="Nombre" IsReadOnly="True" Grid.Row="2" Grid.Column="1"/>
+                <Label Text="Total a pagar" Grid.Row="3" Grid.Column="0"/>
+                <Entry x:Name="txtTotalPagar" Placeholder="Total a pagar" IsReadOnly="True" Grid.Row="3" Grid.Column="1"/>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DannyZapata.Login">
+    <ContentPage.Content>
+        <StackLayout>
+            <Image Source="https://sbsconsulting.com.ec/wp-content/uploads/2018/01/LOGO-UISRAEL-768x209.png "/>
+            <Entry x:Name="txtUsuario" Placeholder="Ingrese su usuario"/>
+            <Entry x:Name="txtPassword" IsPassword="True" Placeholder="Ingrese su contraseña"/>
+            <Button x:Name="btnLogin" Text="Iniciar sesión" Clicked="btnLogin_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

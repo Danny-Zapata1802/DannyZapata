@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:DannyZapata"
+             x:Class="DannyZapata.Registro">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label x:Name="lblUsuario" FontSize="15" />
+            <Label x:Name="lblUsuario2" FontSize="15" IsVisible="false"/>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Label Text="Registro" Grid.Row="0" Grid.Column="0"/>
+                <Label Text="Nombre" Grid.Row="1" Grid.Column="0"/>
+                <Entry x:Name="txtNombre" Placeholder="Ingrese su nombre" Grid.Row="1" Grid.Column="1"/>
+                <Label Text="Monto inicial" Grid.Row="2" Grid.Column="0"/>
+                <Entry x:Name="txtMontoInicial" Keyboard="Telephone" Placeholder="Ingrese el monto inicial" Grid.Row="2" Grid.Column="1">
+                    <Entry.Behaviors>
+                        <local:NumericValidationBehavior/>
+                    </Entry.Behaviors>
+                </Entry>
+                <Label Text="Monto mensual" Grid.Row="3" Grid.Column="0"/>
+                <Entry x:Name="txtMontoMensual" Placeholder="Monto mensual a pagar" IsReadOnly="True" Grid.Row="3" Grid.Column="1"/>
+                <Button x:Name="btnCalcular" Text="Calcular" Clicked="btnCalcular_Clicked" Grid.Row="4" Grid.Column="1"/>
+            </Grid>
+            <Button x:Name="btnGuardar" Text="Guardar" Clicked="btnGuardar_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
