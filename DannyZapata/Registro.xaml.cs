@@ -69,7 +69,6 @@ namespace DannyZapata
                         string nombre = txtNombre.Text;
                         double calculo = mInicial + calculoFinal*(5) ;
                         string totalPagar = calculo.ToString();
-                        await Navigation.PushAsync(new Resumen(usuario, nombre, totalPagar));
                     }
                     else
                     {
