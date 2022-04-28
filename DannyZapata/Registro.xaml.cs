@@ -94,7 +94,15 @@ namespace DannyZapata
         {
             if ( txtMontoInicial.Text != "" && txtMontoMensual.Text != "" && txtNombre.Text != "" )
             {
-                
+                int costo = 3000;
+                string usuario = lblUsuario2.Text;
+                string nombre = txtNombre.Text;
+                double mInicial = Convert.ToDouble(txtMontoInicial.Text);
+                double calculoInicial = (costo - mInicial) / 5;
+                double calculoFinal = calculoInicial + 150;
+                double calculo = mInicial + calculoFinal * (5);
+                string totalPagar = calculo.ToString();
+                await Navigation.PushAsync(new Resumen(usuario, nombre, totalPagar));
                 await DisplayAlert("Success", "Datos Guardados", "OK");
                 
             }
